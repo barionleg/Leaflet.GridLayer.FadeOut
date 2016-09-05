@@ -1,0 +1,16 @@
+{
+  "name": "leaflet.gridlayer.fadeout",
+  "version": "0.1.0",
+  "description": "A plugin for LeafletJS to to fade out grid layers when removed.",
+  "main": "Leaflet.GridLayer.FadeOut.js",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/IvanSanchez/Leaflet.GridLayer.FadeOut.git"
+  },
+  "keywords": [
+    "leaflet",
+    "animation"
+  ],
+  "author": "Iván Sánchez Ortega <ivan@sanchezortega.es>",
+  "license": "Beerware"
+}

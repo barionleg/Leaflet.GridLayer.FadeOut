@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Leaflet.GridLayer.FadeOut</title>
+
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
+	<script src="https://unpkg.com/leaflet-providers@1.1.15/leaflet-providers.js"></script>
+	<script type="text/javascript" src="Leaflet.GridLayer.FadeOut.js"></script>
+	<style>
+	#map {
+		width: 100vw;
+		height: 100vh;
+	}
+
+	body {margin:0;}
+	</style>
+</head>
+<body>
+
+	<div id="map" class="map"></div>
+
+	<script type="text/javascript">
+
+		var layers = {};
+
+		for (var provider in L.TileLayer.Provider.providers) {
+			if (L.TileLayer.Provider.providers[provider].variants) {
+				for (var variant in L.TileLayer.Provider.providers[provider].variants) {
+					layers[provider + '.' + variant] = L.tileLayer.provider(provider + '.' + variant);
+				}
+			} else {
+				layers[provider] = L.tileLayer.provider(provider);
+			}
+		}
+
+		var map = L.map('map').fitWorld();
+
+		L.control.layers(layers, {}, {collapsed: false}).addTo(map);
+		layers[ Object.keys(layers)[0] ].addTo(map);
+
+	</script>
+</body>
+</html>
