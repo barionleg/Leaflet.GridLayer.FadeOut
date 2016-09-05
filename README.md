@@ -1,4 +1,4 @@
-# Leaflet.Marker.SlideTo
+# Leaflet.GridLayer.FadeOut
 
 A plugin for [LeafletJS](http://www.leafletjs.com) to fade out grid layers when removed.
 
