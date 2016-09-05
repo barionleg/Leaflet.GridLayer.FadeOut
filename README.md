@@ -2,9 +2,9 @@
 
 A plugin for [LeafletJS](http://www.leafletjs.com) to fade out grid layers when removed.
 
-Tested with Leaflet 1.0.0-rc3. Do not expect this to work in Leaflet 0.7.x.
+Fading out base gridlayers makes switching baselayers much smoother to the naked eye. See the [demo](http://ivansanchez.gitlab.io/Leaflet.GridLayer.FadeOut/demo.html)!
 
-See the [demo](http://ivansanchez.gitlab.io/Leaflet.GridLayer.FadeOut/demo.html).
+Tested with Leaflet 1.0.0-rc3. Do not expect this to work in Leaflet 0.7.x.
 
 ### API
 
